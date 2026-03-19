@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ageo Soft - Azimuth Map for iOS</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
@@ -21,36 +21,45 @@
 </head>
 <body>
   <header>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <div class="container header-inner">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+        <span></span>
+      </label>
       <a href="index.html" class="logo">
         <img src="logo.jpg" alt="Ageo Soft">
         <span>Ageo Soft</span>
       </a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
-        <span></span>
-      </label>
-      <nav>
+    </div>
+    <nav>
+      <div class="container">
         <a href="index.html">Home</a>
-        <a href="Azimuth%20Map%20for%20iOS.html">Azimuth Map (iOS)</a>
+        <a href="Azimuth%20Map%20for%20iOS.html" class="active">Azimuth Map (iOS)</a>
         <a href="Azimuth%20Map%20for%20Android.html">Azimuth Map (Android)</a>
         <a href="BMCalc.html">BMCalc</a>
         <a href="Music%20Browser%20for%20iOS.html">Music Browser</a>
         <a href="Contact%20Us.html">Contact Us</a>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
 
-
   <main class="container">
-    <div class="app-hero">
+    <div class="app-hero fade-in">
       <img src="Azimuth%20Map%20for%20iOS/icon.jpg" alt="Azimuth Map for iOS" class="app-icon">
-      <h1>Azimuth Map for iOS</h1>
+      <div>
+        <h1>Azimuth Map for iOS</h1>
+        <div class="store-badges">
+          <a href="#" class="store-badge">
+            <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <div><span class="badge-label">Download on the</span><span class="badge-store">App Store</span></div>
+          </a>
+        </div>
+      </div>
     </div>
 
-    <div class="app-description">
-      <p class="lang-en">Azimuth Map displays directional zones on a map from a reference point. You can overlay colored sectors in 30°/60°, 45°, or 12-direction increments. The reference point can be moved freely by drag and drop.</p>
-      <p class="lang-ja">Azimuth Mapは、基準点からの方位をマップ上にカラー表示するアプリです。30°/60°、45°、12方位の切り替えに対応。基準点はドラッグ＆ドロップで自由に移動できます。</p>
+    <div class="app-description fade-in">
+      <p class="lang-en">Azimuth Map displays directional zones on a map from a reference point. You can overlay colored sectors in 30&deg;/60&deg;, 45&deg;, or 12-direction increments. The reference point can be moved freely by drag and drop.</p>
+      <p class="lang-ja">Azimuth Mapは、基準点からの方位をマップ上にカラー表示するアプリです。30&deg;/60&deg;、45&deg;、12方位の切り替えに対応。基準点はドラッグ＆ドロップで自由に移動できます。</p>
 
       <h2><span class="lang-en">Address Search</span><span class="lang-ja">住所検索</span></h2>
       <p class="lang-en">Search for a destination by address and display it on the map. Check the bearing and distance from your reference point.</p>
@@ -66,23 +75,44 @@
       </div>
     </div>
 
-    <div class="screenshots">
+    <div class="screenshots fade-in">
       <img src="Azimuth%20Map%20for%20iOS/screenshot-1.jpg" alt="Azimuth Map for iOS Screenshot 1">
       <img src="Azimuth%20Map%20for%20iOS/screenshot-2.jpg" alt="Azimuth Map for iOS Screenshot 2">
       <img src="Azimuth%20Map%20for%20iOS/screenshot-3.jpg" alt="Azimuth Map for iOS Screenshot 3">
     </div>
 
-    <div class="app-links">
+    <div class="app-links fade-in">
       <a href="Privacy%20Policy%20-%20Azimuth%20Map.html">Privacy Policy</a>
     </div>
   </main>
 
   <footer>
-    <div class="container">
-      <p>Copyright &copy; Ageo Soft All Rights Reserved.</p>
-      <p class="lang-en"><a class="lang-link" onclick="switchLang('ja')">日本語</a></p>
-      <p class="lang-ja"><a class="lang-link" onclick="switchLang('en')">English</a></p>
+    <div class="container footer-inner">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="Azimuth%20Map%20for%20iOS.html">Azimuth Map (iOS)</a>
+        <a href="Azimuth%20Map%20for%20Android.html">Azimuth Map (Android)</a>
+        <a href="BMCalc.html">BMCalc</a>
+        <a href="Music%20Browser%20for%20iOS.html">Music Browser</a>
+        <a href="Contact%20Us.html">Contact Us</a>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; Ageo Soft All Rights Reserved.</p>
+        <p class="lang-en"><a class="lang-link" onclick="switchLang('ja')">日本語</a></p>
+        <p class="lang-ja"><a class="lang-link" onclick="switchLang('en')">English</a></p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+    });
+  </script>
 </body>
 </html>

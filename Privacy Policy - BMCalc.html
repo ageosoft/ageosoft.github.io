@@ -4,35 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ageo Soft - Privacy Policy (BMCalc)</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <div class="container header-inner">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+        <span></span>
+      </label>
       <a href="index.html" class="logo">
         <img src="logo.jpg" alt="Ageo Soft">
         <span>Ageo Soft</span>
       </a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
-        <span></span>
-      </label>
-      <nav>
+    </div>
+    <nav>
+      <div class="container">
         <a href="index.html">Home</a>
         <a href="Azimuth%20Map%20for%20iOS.html">Azimuth Map (iOS)</a>
         <a href="Azimuth%20Map%20for%20Android.html">Azimuth Map (Android)</a>
         <a href="BMCalc.html">BMCalc</a>
         <a href="Music%20Browser%20for%20iOS.html">Music Browser</a>
         <a href="Contact%20Us.html">Contact Us</a>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
 
   <main class="container">
-    <div class="privacy-content">
+    <div class="privacy-content fade-in">
       <h1>Privacy Policy — BMCalc</h1>
 
       <p>Ageo Soft built the BMCalc app as a free app. This service is provided by Ageo Soft at no cost and is intended for use as is.</p>
@@ -82,9 +84,30 @@
   </main>
 
   <footer>
-    <div class="container">
-      <p>Copyright &copy; Ageo Soft All Rights Reserved.</p>
+    <div class="container footer-inner">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="Azimuth%20Map%20for%20iOS.html">Azimuth Map (iOS)</a>
+        <a href="Azimuth%20Map%20for%20Android.html">Azimuth Map (Android)</a>
+        <a href="BMCalc.html">BMCalc</a>
+        <a href="Music%20Browser%20for%20iOS.html">Music Browser</a>
+        <a href="Contact%20Us.html">Contact Us</a>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; Ageo Soft All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+    });
+  </script>
 </body>
 </html>

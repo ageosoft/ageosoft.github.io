@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ageo Soft - Azimuth Map for Android</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
@@ -21,34 +21,43 @@
 </head>
 <body>
   <header>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <div class="container header-inner">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+        <span></span>
+      </label>
       <a href="index.html" class="logo">
         <img src="logo.jpg" alt="Ageo Soft">
         <span>Ageo Soft</span>
       </a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
-        <span></span>
-      </label>
-      <nav>
+    </div>
+    <nav>
+      <div class="container">
         <a href="index.html">Home</a>
         <a href="Azimuth%20Map%20for%20iOS.html">Azimuth Map (iOS)</a>
-        <a href="Azimuth%20Map%20for%20Android.html">Azimuth Map (Android)</a>
+        <a href="Azimuth%20Map%20for%20Android.html" class="active">Azimuth Map (Android)</a>
         <a href="BMCalc.html">BMCalc</a>
         <a href="Music%20Browser%20for%20iOS.html">Music Browser</a>
         <a href="Contact%20Us.html">Contact Us</a>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
 
-
   <main class="container">
-    <div class="app-hero">
+    <div class="app-hero fade-in">
       <img src="Azimuth%20Map%20for%20Android/icon.jpg" alt="Azimuth Map for Android" class="app-icon">
-      <h1>Azimuth Map for Android</h1>
+      <div>
+        <h1>Azimuth Map for Android</h1>
+        <div class="store-badges">
+          <a href="#" class="store-badge">
+            <svg viewBox="0 0 24 24"><path d="M3.18 23.49c.18.09.38.14.58.14.2 0 .41-.05.59-.15L16.53 17l-3.72-3.73L3.18 23.49zm-1.55-1.93c-.1-.24-.16-.5-.16-.78V3.22c0-.28.06-.54.16-.78L11.4 12.2 1.63 21.56zM21.4 10.36l-3.2-1.78-3.86 3.61 3.86 3.61 3.2-1.78c.56-.31.9-.86.9-1.46v-.74c0-.6-.34-1.15-.9-1.46zM5.15.51L16.53 7l-3.72 3.72L3.18.54c.43-.29.97-.31 1.39-.09l.58.06z"/></svg>
+            <div><span class="badge-label">GET IT ON</span><span class="badge-store">Google Play</span></div>
+          </a>
+        </div>
+      </div>
     </div>
 
-    <div class="app-description">
+    <div class="app-description fade-in">
       <p class="lang-en">Azimuth Map displays directional zones from a reference point with colors on a map. Useful for Feng Shui, checking auspicious directions, and more.</p>
       <p class="lang-ja">Azimuth Mapは、基準点からの方位をマップ上にカラー表示するアプリです。風水や方角の確認などにご活用いただけます。</p>
 
@@ -58,7 +67,7 @@
         <li>Search destinations by address or phone number</li>
         <li>Save up to 10 destinations</li>
         <li>Drag and drop to move reference point and destinations</li>
-        <li>Choose from 30°/60°, 45°, or 12-direction display</li>
+        <li>Choose from 30&deg;/60&deg;, 45&deg;, or 12-direction display</li>
         <li>Customize azimuth colors freely</li>
       </ul>
       <ul class="lang-ja">
@@ -66,7 +75,7 @@
         <li>住所・電話番号で目的地を検索</li>
         <li>最大10件の目的地を保存可能</li>
         <li>ドラッグ＆ドロップで基準点・目的地を移動</li>
-        <li>30°/60°、45°、12方位表示を切り替え可能</li>
+        <li>30&deg;/60&deg;、45&deg;、12方位表示を切り替え可能</li>
         <li>方位の色を自由にカスタマイズ</li>
       </ul>
 
@@ -76,23 +85,44 @@
       </div>
     </div>
 
-    <div class="screenshots">
+    <div class="screenshots fade-in">
       <img src="Azimuth%20Map%20for%20Android/screenshot-1.jpg" alt="Azimuth Map for Android Screenshot 1">
       <img src="Azimuth%20Map%20for%20Android/screenshot-2.jpg" alt="Azimuth Map for Android Screenshot 2">
       <img src="Azimuth%20Map%20for%20Android/screenshot-3.jpg" alt="Azimuth Map for Android Screenshot 3">
     </div>
 
-    <div class="app-links">
+    <div class="app-links fade-in">
       <a href="Privacy%20Policy%20-%20Azimuth%20Map.html">Privacy Policy</a>
     </div>
   </main>
 
   <footer>
-    <div class="container">
-      <p>Copyright &copy; Ageo Soft All Rights Reserved.</p>
-      <p class="lang-en"><a class="lang-link" onclick="switchLang('ja')">日本語</a></p>
-      <p class="lang-ja"><a class="lang-link" onclick="switchLang('en')">English</a></p>
+    <div class="container footer-inner">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="Azimuth%20Map%20for%20iOS.html">Azimuth Map (iOS)</a>
+        <a href="Azimuth%20Map%20for%20Android.html">Azimuth Map (Android)</a>
+        <a href="BMCalc.html">BMCalc</a>
+        <a href="Music%20Browser%20for%20iOS.html">Music Browser</a>
+        <a href="Contact%20Us.html">Contact Us</a>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; Ageo Soft All Rights Reserved.</p>
+        <p class="lang-en"><a class="lang-link" onclick="switchLang('ja')">日本語</a></p>
+        <p class="lang-ja"><a class="lang-link" onclick="switchLang('en')">English</a></p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+    });
+  </script>
 </body>
 </html>
