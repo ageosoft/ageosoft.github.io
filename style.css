@@ -273,18 +273,22 @@ footer {
     display: flex;
     align-items: center;
     padding: 0.5rem;
-    order: 2;
+    order: -1;
   }
 
-  .logo { order: 1; }
+  .logo { order: 1; margin-left: auto; }
 
   nav {
-    display: none;
+    display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top: 0.75rem;
+    padding-top: 0;
     gap: 0.25rem;
     order: 3;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.3s ease, padding-top 0.35s ease;
   }
   nav a {
     padding: 0.6rem 0;
@@ -292,7 +296,11 @@ footer {
   }
   nav a:last-child { border-bottom: none; }
 
-  .nav-toggle:checked ~ nav { display: flex; }
+  .nav-toggle:checked ~ nav {
+    max-height: 300px;
+    opacity: 1;
+    padding-top: 0.75rem;
+  }
 
   /* Hamburger animation on open */
   .nav-toggle:checked ~ .nav-toggle-label span { background: transparent; }
