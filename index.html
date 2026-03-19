@@ -45,24 +45,40 @@
   <main class="container">
     <h1 class="page-heading"><span class="lang-en">Our Apps</span><span class="lang-ja">アプリ一覧</span></h1>
     <div class="app-grid">
-      <a href="Azimuth%20Map%20for%20iOS.html" class="app-card">
+      <a href="Azimuth%20Map%20for%20iOS.html" class="app-card fade-in">
         <img src="Home/azimuth-map-ios.jpg" alt="Azimuth Map for iOS">
         <div class="card-title">Azimuth Map for iOS</div>
       </a>
-      <a href="Azimuth%20Map%20for%20Android.html" class="app-card">
+      <a href="Azimuth%20Map%20for%20Android.html" class="app-card fade-in">
         <img src="Home/azimuth-map-android.jpg" alt="Azimuth Map for Android">
         <div class="card-title">Azimuth Map for Android</div>
       </a>
-      <a href="BMCalc.html" class="app-card">
+      <a href="BMCalc.html" class="app-card fade-in">
         <img src="Home/bmcalc.jpg" alt="BMCalc for Android / iOS">
         <div class="card-title">BMCalc for Android / iOS</div>
       </a>
-      <a href="Music%20Browser%20for%20iOS.html" class="app-card">
+      <a href="Music%20Browser%20for%20iOS.html" class="app-card fade-in">
         <img src="Home/music-browser.jpg" alt="Music Browser for iOS">
         <div class="card-title">Music Browser for iOS</div>
       </a>
     </div>
   </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-in').forEach(function(el) {
+        observer.observe(el);
+      });
+    });
+  </script>
 
   <footer>
     <div class="container">
