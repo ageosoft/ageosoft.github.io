@@ -303,6 +303,40 @@ main { flex: 1; padding: 4rem 0 6rem; }
 .screenshots img:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  transform: scale(0.85);
+  transition: transform 0.3s ease;
+}
+.lightbox.active img {
+  transform: scale(1);
 }
 
 .disclaimer {

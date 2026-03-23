@@ -32,9 +32,9 @@
       </a>
       <nav>
         <a href="index.html">Home</a>
-        <a href="Azimuth%20Map%20for%20iOS.html">Azimuth Map (iOS)</a>
-        <a href="Azimuth%20Map%20for%20Android.html" class="active">Azimuth Map (Android)</a>
-        <a href="BMCalc.html">BMCalc</a>
+        <a href="Azimuth%20Map%20for%20iOS.html"><span class="lang-en">Azimuth Map</span><span class="lang-ja">方位地図</span> (iOS)</a>
+        <a href="Azimuth%20Map%20for%20Android.html" class="active"><span class="lang-en">Azimuth Map</span><span class="lang-ja">方位地図</span> (Android)</a>
+        <a href="BMCalc.html"><span class="lang-en">Currency converter custom</span><span class="lang-ja">通貨換算ツール - カスタム</span></a>
         <a href="Music%20Browser%20for%20iOS.html">Music Browser</a>
         <a href="Contact%20Us.html">Contact Us</a>
       </nav>
@@ -45,7 +45,7 @@
     <div class="app-hero fade-in">
       <img src="Azimuth%20Map%20for%20Android/icon.jpg" alt="Azimuth Map for Android" class="app-icon">
       <div>
-        <h1>Azimuth Map for Android</h1>
+        <h1><span class="lang-en">Azimuth Map for Android</span><span class="lang-ja">方位地図 for Android</span></h1>
         <div class="store-badges">
           <a href="https://play.google.com/store/apps/details?id=com.ageosoft.azimuthmap_android" class="store-badge">
             <svg viewBox="0 0 24 24"><path d="M3.18 23.49c.18.09.38.14.58.14.2 0 .41-.05.59-.15L16.53 17l-3.72-3.73L3.18 23.49zm-1.55-1.93c-.1-.24-.16-.5-.16-.78V3.22c0-.28.06-.54.16-.78L11.4 12.2 1.63 21.56zM21.4 10.36l-3.2-1.78-3.86 3.61 3.86 3.61 3.2-1.78c.56-.31.9-.86.9-1.46v-.74c0-.6-.34-1.15-.9-1.46zM5.15.51L16.53 7l-3.72 3.72L3.18.54c.43-.29.97-.31 1.39-.09l.58.06z"/></svg>
@@ -57,7 +57,7 @@
 
     <div class="app-description fade-in">
       <p class="lang-en">Azimuth Map displays directional zones from a reference point with colors on a map. Useful for Feng Shui, checking auspicious directions, and more.</p>
-      <p class="lang-ja">Azimuth Mapは、基準点からの方位をマップ上にカラー表示するアプリです。風水や方角の確認などにご活用いただけます。</p>
+      <p class="lang-ja">方位地図は、基準点からの方位をマップ上にカラー表示するアプリです。風水や方角の確認などにご活用いただけます。</p>
 
       <h2><span class="lang-en">Features</span><span class="lang-ja">機能</span></h2>
       <ul class="lang-en">
@@ -98,9 +98,9 @@
     <div class="container footer-inner">
       <div class="footer-nav">
         <a href="index.html">Home</a>
-        <a href="Azimuth%20Map%20for%20iOS.html">Azimuth Map (iOS)</a>
-        <a href="Azimuth%20Map%20for%20Android.html">Azimuth Map (Android)</a>
-        <a href="BMCalc.html">BMCalc</a>
+        <a href="Azimuth%20Map%20for%20iOS.html"><span class="lang-en">Azimuth Map</span><span class="lang-ja">方位地図</span> (iOS)</a>
+        <a href="Azimuth%20Map%20for%20Android.html"><span class="lang-en">Azimuth Map</span><span class="lang-ja">方位地図</span> (Android)</a>
+        <a href="BMCalc.html"><span class="lang-en">Currency converter custom</span><span class="lang-ja">通貨換算ツール - カスタム</span></a>
         <a href="Music%20Browser%20for%20iOS.html">Music Browser</a>
         <a href="Contact%20Us.html">Contact Us</a>
       </div>
@@ -120,6 +120,23 @@
         });
       }, { threshold: 0.1 });
       document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+      // Lightbox
+      var lightbox = document.createElement('div');
+      lightbox.className = 'lightbox';
+      lightbox.innerHTML = '<img>';
+      document.body.appendChild(lightbox);
+      var lbImg = lightbox.querySelector('img');
+      document.querySelectorAll('.screenshots img').forEach(function(img) {
+        img.addEventListener('click', function() {
+          lbImg.src = this.src;
+          lbImg.alt = this.alt;
+          lightbox.classList.add('active');
+        });
+      });
+      lightbox.addEventListener('click', function() {
+        lightbox.classList.remove('active');
+      });
     });
   </script>
 </body>
